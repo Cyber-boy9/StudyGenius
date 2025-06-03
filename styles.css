@@ -254,3 +254,260 @@ body {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
 }
+
+/* Summary Section */
+.summary-section {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--bg-dark-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.summary-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-output {
+    background-color: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    white-space: pre-wrap; /* Preserve line breaks and spaces in summary */
+}
+
+.summary-output p:first-child {
+    margin-top: 0;
+}
+
+.summary-output p {
+    margin-bottom: 1rem;
+}
+
+/* Analysis Section */
+.analysis-section {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--bg-dark-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.analysis-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.analysis-output {
+    background-color: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+}
+
+.analysis-output p:first-child {
+    margin-top: 0;
+}
+
+.analysis-output p {
+    margin-bottom: 1rem;
+}
+
+.analysis-output ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.analysis-output li {
+    margin-bottom: 0.5rem;
+}
+
+.analysis-output strong {
+    color: var(--text-primary);
+}
+
+/* Chat Section */
+.chat-section {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--bg-dark-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.chat-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.chat-messages {
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 8px;
+    height: 300px; /* Max height, adjust as needed */
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color); /* Subtle border */
+}
+
+.chat-message {
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    max-width: 80%;
+    word-wrap: break-word;
+    /* Animation will be added via class in JS */
+}
+
+.chat-message-enter {
+    opacity: 0;
+    transform: translateY(10px); /* Start 10px down */
+    animation: chatEnter 0.3s ease-out forwards;
+}
+
+@keyframes chatEnter {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.ai-message {
+    background-color: #2D3748; /* A bit lighter than bg-dark */
+    color: var(--text-secondary);
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#chatInput {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+#chatInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3);
+}
+
+#sendChatButton {
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#sendChatButton:hover {
+    background-color: var(--secondary-color);
+}
+
+#sendChatButton:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+    filter: brightness(0.9); /* Slightly darken button on click */
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: var(--bg-dark-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.quiz-output {
+    background-color: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.quiz-output ol {
+    list-style-position: inside;
+    padding-left: 0; /* Reset default ol padding */
+}
+
+.quiz-output li {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem; /* Indent the text of li slightly */
+    border-left: 3px solid var(--primary-color); /* Visual cue for each question */
+    background-color: rgba(124, 58, 237, 0.05); /* Slight background tint for each li */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+    /* Base style for animation - will be applied by adding class in JS */
+}
+
+.quiz-question-enter {
+    opacity: 0;
+    transform: translateX(-20px); /* Start 20px to the left */
+    animation: quizQuestionSlideIn 0.4s ease-out forwards;
+}
+
+@keyframes quizQuestionSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide to normal position */
+    }
+}
+
+/* Optional: Staggering (if not done by JS, but JS is more flexible) */
+/*
+.quiz-output li:nth-child(1) { animation-delay: 0.05s; }
+.quiz-output li:nth-child(2) { animation-delay: 0.1s; }
+.quiz-output li:nth-child(3) { animation-delay: 0.15s; }
+...
+*/
+
+.quiz-output li:last-child {
+    margin-bottom: 0;
+}
+
+.quiz-output .error-message {
+    color: #EF4444; /* Red for errors */
+    font-weight: bold;
+}
