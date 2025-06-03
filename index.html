@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyGenius - AI-Powered Learning Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="particle-background" id="particles"></div>
+    <div class="loading-spinner" id="loadingSpinner"></div>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <nav class="navbar">
+        <div class="logo">StudyGenius</div>
+        <div class="nav-links">
+            <a href="#upload">Upload</a>
+            <a href="#summary">Summary</a>
+            <a href="#chat">Chat</a>
+            <a href="#quiz">Quiz</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="hero" class="hero-section">
+            <h1>Transform Your Study Material with AI</h1>
+            <p>Upload your documents and let AI help you master your studies</p>
+            <div class="upload-container">
+                <div class="upload-box" id="dropZone">
+                    <svg class="upload-icon" width="50" height="50" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                    </svg>
+                    <p>Drop your documents here or click to upload</p>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt,.pptx" hidden>
+                </div>
+            </div>
+            
+            <div class="upload-container">
+                <div class="upload-box" id="dropZone">
+                    <svg class="upload-icon" width="50" height="50" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                    </svg>
+                    <p>Drop your documents here or click to upload</p>
+                    <p class="upload-info">(Max 20MB, up to 2 files simultaneously)</p>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt,.pptx" hidden>
+                </div>
+                <div id="filePreviewContainer" class="file-preview-container"></div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <!-- Feature sections will be added here -->
+        </section>
+    </main>
+
+    <div id="notificationContainer"></div>
+    
+    <!-- Add particle.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
+    
